@@ -55,4 +55,36 @@ export const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
       },
+
+      modalContainer: {
+        flex: 1,
+      },
+      headerModal: {
+        width: "100%",
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+        borderBottomColor: "#DDD",
+        borderBottomWidth: 1,
+        paddingHorizontal: 20,
+        paddingBottom: 10,
+        marginBottom: 20,
+      },
+      title: {
+        fontSize: 30,
+        fontWeight: "bold",
+      },
+      list: { flex: 1, width: "100%", paddingHorizontal: 40 },
+      button: {
+        width: "100%",
+        backgroundColor: "#DDD",
+        borderRadius: 10,
+        padding: 20,
+        marginBottom: 10,
+      },
+      buttonText: {
+        fontSize: 18,
+        fontWeight: "bold",
+        textAlign: "center",
+      },
 })
