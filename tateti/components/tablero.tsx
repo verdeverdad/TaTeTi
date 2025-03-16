@@ -15,20 +15,22 @@ interface BoardProps {
 }
 
 export const Board = ({ xIsNext, squares, onRestart, onPlay }: BoardProps) => {
+
+
   const onPressHandler = (index: number) => () => {
     if (squares[index] || calculateWinner(squares)) {
-      return;
+      return; //si hay un ganador ya no se ejecuta el juego
     }
 
-    const nextSquares = squares.slice();
+    const nextSquares = squares.slice();  //funcion para saber si va x u o
     nextSquares[index] = xIsNext ? "X" : "O";
     onPlay(nextSquares);
   };
 
-  const winner = calculateWinner(squares);
+  const winner = calculateWinner(squares); // funcion que determina si hay un ganador esta en carpeta until
   const status = winner
     ? `Ganador: ${winner}`
-    : `Próximo Jugador: ${xIsNext ? "X" : "O"}`;
+    : `Próximo Jugador: ${xIsNext ? "X" : "O"}`; //status si hay un ganador lo muestra sino sigue poniendo x u o
 
   return (
     <>
